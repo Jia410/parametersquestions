@@ -1,0 +1,75 @@
+//page2
+func hello(name: String) {
+print("Hello " + name)
+}
+hello(name: "Maria")
+hello(name: "Vikram")
+//page3
+let favourite = "pizza"
+print("My favourite food is " + favourite)
+//page4
+func hello(firstName: String, lastName: String) {
+    print("Hello \(firstName) \(lastName)")
+}
+hello(firstName: "Johnny", lastName: "Appleseed")
+hello(firstName: "John", lastName: "Snow")
+//page6
+func spaceAvailableMessage(eachVideoDuration: Int, numberOfVideos: Int) -> String {
+    let currentSpace = 10000
+    let megabytesPerVideoSecond = 3
+    let spaceAvailable = currentSpace - eachVideoDuration * numberOfVideos * megabytesPerVideoSecond
+
+    return "If your \(numberOfVideos) videos are \(eachVideoDuration) seconds each, you'll have \(spaceAvailable) MBs remaining"
+}
+spaceAvailableMessage(eachVideoDuration: 10, numberOfVideos: 50)
+let desiredVideoDuration = 40
+let holidayVideoCount = 100
+let videoMessage = spaceAvailableMessage(eachVideoDuration: desiredVideoDuration, numberOfVideos: holidayVideoCount)
+let namedVideoMessage = "Hey Micah! \(videoMessage)"
+//page9
+func listByAdding(item: String, toList: String) -> String {
+    return toList + "\n" + item
+}
+var list = "Milk"
+list = listByAdding(item:"Eggs", toList: list)
+list = listByAdding(item:"Bread", toList: list)
+//page11
+func printHello(to: String) {
+    print ("Hello " + to)
+}
+printHello(to: "Maya")
+//page12
+func printHello(to name: String) {
+    print("Hello " + name)
+}
+printHello(to: "Chris")
+printHello(to: "Johnny")
+//page13
+func printHelloTo(_ name: String) {
+    print("Hello " + name)
+}
+printHelloTo("Maya")
+printHelloTo("Hiro")
+//page16
+func impossibleBeliefsCount(pigsFlying: Int, frogsBecomingPrinces: Int, multipleLightningStrikes: Int) {
+    let total = pigsFlying + frogsBecomingPrinces + multipleLightningStrikes
+    print(total)
+}
+func impossibleThingsPhrase() -> String {
+    let numberOfImpossibleThings = 10
+    let meal = "teatime"
+    return "Why, I've believed as many as \(numberOfImpossibleThings) before \(meal)"
+}
+//page17
+func score(reds: Int, greens: Int, golds: Int) -> Int {
+    let pointsPerRed = 5
+    let pointsPerGreen = 10
+    let pointsPerGold = 30
+    
+    let redScore = reds * pointsPerRed
+    let greenScore = greens * pointsPerGreen
+    let goldScore = golds * pointsPerGold
+    
+    return redScore + greenScore + goldScore
+}
+let finalScore = score(reds: 5, greens: 3, golds: 3)
